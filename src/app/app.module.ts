@@ -10,6 +10,8 @@ import { UserChangeComponent } from './user/user-change/user-change.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserGetComponent } from './user/user-get/user-get.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AboutComponent } from './about/about.component';
     UserChangeComponent,
     UserDeleteComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    UserEditComponent,
+    UserGetComponent
   ],
   imports: [
     BrowserModule,
