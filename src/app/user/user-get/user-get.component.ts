@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../user.service';
+import {User} from '../user';
+import {JsonResponse} from '../../JsonResponse';
 
 @Component({
   selector: 'app-user-get',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserGetComponent implements OnInit {
 
-  constructor() { }
+  user: User= new User();
+
+  
+
+  constructor(private userscv: UserService) { }
 
   ngOnInit() {
+    this.userscv.get(this.user.Id)
+    .subscribe(resp=>{
+      this.user=resp.Data;
+      console.log(resp);
+    });
   }
 
 }

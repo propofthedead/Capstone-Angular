@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../user.service';
+import {User} from '../user';
+import {JsonResponse} from '../../JsonResponse';
 
 @Component({
   selector: 'app-user-list',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
+  
+  users: User[] = [];
+  
+  
 
-  constructor() { }
+  constructor(private Usersvc: UserService) { }
 
   ngOnInit() {
+    this.Usersvc.list()
+      .subscribe(resp=>{
+        this.users=resp.Data;
+        console.log(resp);
+      })
   }
 
 }
