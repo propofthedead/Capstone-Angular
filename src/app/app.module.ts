@@ -3,10 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserChangeComponent } from './user/user-change/user-change.component';
+import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent,
+    UserListComponent,
+    UserCreateComponent,
+    UserChangeComponent,
+    UserDeleteComponent
   ],
   imports: [
     BrowserModule,
