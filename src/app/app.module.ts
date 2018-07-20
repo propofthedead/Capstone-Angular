@@ -18,7 +18,6 @@ import { UserGetComponent } from './user/user-get/user-get.component';
     UserComponent,
     UserListComponent,
     UserCreateComponent,
-    UserChangeComponent,
     UserDeleteComponent,
     HomeComponent,
     AboutComponent,

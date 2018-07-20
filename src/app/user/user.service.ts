@@ -10,7 +10,7 @@ import {JsonResponse} from '../JsonResponse';
 
 export class UserService{
 
-    url="http://localhost:62556/Users/";
+    url="";
 
     list(): Observable<JsonResponse>{
       return this.http.get(this.url+"List") as Observable<JsonResponse>
