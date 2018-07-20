@@ -1,3 +1,28 @@
-<p>
-  user-get works!
-</p>
+<h1>
+  User details
+</h1>
+  <div>
+    <table>
+      <tr>
+        <th>Name</th><td>{{user.Firstname}},{{user.Lastname}}</td>
+      </tr>
+      <tr>
+        <th>Username</th><td>{{user.Username}}</td>
+      </tr>
+      <tr>
+        <th>Phone</th><td>{{user.Phone}}</td>
+      </tr>
+      <tr>
+        <th>Email</th><td>{{user.Email}}</td>
+      </tr>
+      <tr>
+        <th>Reviewer?</th><td>{{user.IsReviewer ? "yes"|"no"}}</td>
+      </tr>
+      <tr>
+        <th>Admin?</th><td>{{user.IsAdmin ? "yes"|"no"}}</td>
+      </tr>
+      <tr>
+        <th>Active?</th><td>{{user.Active ? "yes"|"no"}}</td>
+      </tr>
+    </table>
+  </div>
