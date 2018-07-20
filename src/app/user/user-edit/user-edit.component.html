@@ -1,0 +1,48 @@
+<div>
+    <div class="form-group">
+        <label for="username">User Name </label>
+        <input id="username" type="text" class="form-control" placeholder="username" required [(ngModel)]= "user.UserName">
+    </div>
+    <div class="form-group">
+        <label for="firstname">Firstname </label>
+        <input id="firstname" type="text" class="form-control" placeholder="firstname" required [(ngModel)]= "user.Firstname">
+      </div>
+      <div class="form-group">
+          <label for="lastname">LastName </label>
+          <input id="lastname" type="text" class="form-control" placeholder="lastname" required [(ngModel)]= "user.Lastname">
+        </div>
+        <div class="form-group">
+            <label for="password">User Name </label>
+            <input id="password" type="password" class="form-control" placeholder="password" required [(ngModel)]= "user.Password">
+          </div>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="text" class="form-control" placeholder="email" required [(ngModel)]= "user.Email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone </label>
+                <input id="phone" type="text" class="form-control" placeholder="5555555555" required [(ngModel)]= "user.Phone">
+              </div>
+              <div class="form-group">
+                  <label for="IsReviewer">Reviewer? </label>
+                  <select id="username"  class="form-control"  required [(ngModel)]= "user.IsReviewer">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="IsAdmin">Admin? </label>
+                    <select id="username"  class="form-control"  required [(ngModel)]= "user.IsAdmin">
+                      <option value="true">Yes</option>
+                      <option value="false">No</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                      <label for="Active">Active? </label>
+                      <select id="Active"  class="form-control"  required [(ngModel)]= "user.Active">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                      </select>
+                    </div>
+  <button "click=change()">Edit</button>
+</div>

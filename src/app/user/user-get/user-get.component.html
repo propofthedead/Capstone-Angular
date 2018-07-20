@@ -16,13 +16,13 @@
         <th>Email</th><td>{{user.Email}}</td>
       </tr>
       <tr>
-        <th>Reviewer?</th><td>{{user.IsReviewer}}</td>
+        <th>Reviewer?</th><td>{{user.IsReviewer | bool}}</td>
       </tr>
       <tr>
-        <th>Admin?</th><td>{{user.IsAdmin}}</td>
+        <th>Admin?</th><td>{{user.IsAdmin | bool}}</td>
       </tr>
       <tr>
-        <th>Active?</th><td>{{user.Active}}</td>
+        <th>Active?</th><td>{{user.Active | bool}}</td>
       </tr>
     </table>
   </div>
