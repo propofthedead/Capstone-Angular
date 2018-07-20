@@ -11,6 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserGetComponent } from './user/user-get/user-get.component';
+import { VendorComponent } from './vendor/vendor.component';
+import { VendorGetComponent } from './Vendor/vendor-get/vendor-get.component';
+import { VendorListComponent } from './Vendor/vendor-list/vendor-list.component';
+import { VendorCreateComponent } from './Vendor/vendor-create/vendor-create.component';
+import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { UserGetComponent } from './user/user-get/user-get.component';
     HomeComponent,
     AboutComponent,
     UserEditComponent,
-    UserGetComponent
+    UserGetComponent,
+    VendorComponent,
+    VendorGetComponent,
+    VendorListComponent,
+    VendorCreateComponent,
+    VendorEditComponent
   ],
   imports: [
     BrowserModule,
