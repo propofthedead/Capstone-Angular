@@ -23,7 +23,7 @@ export class UserService{
       return this.http.post(this.url+"Create",user) as Observable<JsonResponse>;
     }
 
-    change(user: User): Observable<JsonResponse>{
+    edit(user: User): Observable<JsonResponse>{
       return this.http.post(this.url+"Change",user) as Observable<JsonResponse>;
     }
 
