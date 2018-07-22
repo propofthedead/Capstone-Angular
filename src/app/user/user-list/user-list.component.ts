@@ -10,8 +10,20 @@ import {JsonResponse} from '../../JsonResponse';
 })
 export class UserListComponent implements OnInit {
   
-  users: User[] = [];
-  
+  users: User[] = [
+    {Id:1,
+    UserName:"ararararaa",
+    Password: "sholmo",
+    FirstName: "apapa",
+    LastName: "ja",
+    Email:"adsjfa@adsfs.com",
+    Phone: "55555555",
+    IsAdmin:false,
+    IsReviewer:true,
+    Active:true
+    }
+  ];
+  resp: JsonResponse= new JsonResponse();
   
 
   constructor(private Usersvc: UserService) { }
