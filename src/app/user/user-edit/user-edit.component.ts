@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import {User} from '../user';
 import {JsonResponse} from '../../JsonResponse';
-import { Router } from '../../../../node_modules/@angular/router';
+import { Router, ActivatedRoute } from '../../../../node_modules/@angular/router';
 
 
 @Component({
@@ -24,9 +24,11 @@ export class UserEditComponent implements OnInit {
       })
   }
 
-  constructor(private Usersvc: UserService, private route:Router) { }
+  constructor(private Usersvc: UserService, private route:Router, private routed: ActivatedRoute) { }
 
   ngOnInit() {
+    this.user= this.routed.snapshot.params.id;
+
   }
 
 }
