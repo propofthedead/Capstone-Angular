@@ -16,7 +16,7 @@ import { VendorGetComponent } from './Vendor/vendor-get/vendor-get.component';
 import { VendorListComponent } from './Vendor/vendor-list/vendor-list.component';
 import { VendorCreateComponent } from './Vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
-import { UserLoginComponent } from './user-login/user-login.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 @NgModule({
   declarations: [

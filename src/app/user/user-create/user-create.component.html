@@ -2,45 +2,45 @@
 
     <div class="form-group">
       <label for="username">User Name </label>
-      <input id="username" type="text" class="form-control" placeholder="username" required ng-model ="user.Username">
+      <input id="username" type="text" class="form-control" placeholder="username" required [(ngModel)] ="user.UserName" name="UserName">
     </div>
     <div class="form-group">
-      <label for="password">Password </label>
-      <input id="password" type="password" class="form-control" placeholder="password" required ng-model= "user.Password">
+      <label for="Password">Password </label>
+      <input id="Password" type="password" class="form-control" placeholder="password" required [(ngModel)]= "user.Password" name="Password" >
     </div>
     <div class="form-group">
       <label for="FirstName">FirstName </label>
-      <input id="FirstName" type="text" class="form-control" placeholder="FirstName" required ng-model= "user.FirstName">
+      <input id="FirstName" type="text" class="form-control" placeholder="FirstName" required [(ngModel)]= "user.FirstName" name="FirstName">
     </div>
     <div class="form-group">
       <label for="LastName">LastName </label>
-      <input id="LastName" type="text" class="form-control" placeholder="LastName" required ng-model= "user.LastName">
+      <input id="LastName" type="text" class="form-control" placeholder="LastName" required [(ngModel)]= "user.LastName" name="LastName">
     </div>
     <div class="form-group">
       <label for="Phone">Phone </label>
-      <input id="Phone" type="text" class="form-control" placeholder="Phone" required ng-model= "user.Phone">
+      <input id="Phone" type="text" class="form-control" placeholder="Phone" required [(ngModel)]= "user.Phone" name="Phone">
     </div>
     <div class="form-group">
       <label for="Email">Email </label>
-      <input id="Email" type="text" class="form-control" placeholder="Email" required ng-model= "user.Email">
+      <input id="Email" type="text" class="form-control" placeholder="Email" required [(ngModel)]= "user.Email" name="Email">
     </div>
     <div class="form-group">
       <label for="IsReviewer">Reviewer? </label>
-      <select id="IsReviewer"  class="form-control"  required ng-model= "user.IsReviewer">
+      <select id="IsReviewer"  class="form-control"  required [(ngModel)]= "user.IsReviewer" name="IsReviewer">
         <option value="true">Yes</option>
         <option value="false">No</option>
       </select>
     </div>
     <div class="form-group">
         <label for="IsAdmin">Admin? </label>
-        <select id="IsAdmin"  class="form-control"  required ng-model= "user.IsAdmin">
+        <select id="IsAdmin"  class="form-control"  required [(ngModel)]= "user.IsAdmin" name="IsAdmin">
           <option value="true">Yes</option>
           <option value="false">No</option>
         </select>
       </div>
       <div class="form-group">
           <label for="Active">Active? </label>
-          <select id="Active"  class="form-control"  required ng-model= "user.Active">
+          <select id="Active"  class="form-control"  required [(ngModel)]= "user.Active" name="Active">
             <option value="true">Yes</option>
             <option value="false">No</option>
           </select>
