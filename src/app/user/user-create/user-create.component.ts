@@ -3,19 +3,9 @@ import {UserService} from '../user.service';
 import {User} from '../user';
 import {JsonResponse} from '../../JsonResponse';
 import { Router } from '../../../../node_modules/@angular/router';
-import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent} from '../../app.component';
 
-    @NgModule({
-      declarations: [
-        AppComponent
-      ],
-      imports: [
-        BrowserModule,
-        FormsModule ],
 
-    })
+
 @Component({
   selector: 'app-user-create',
   templateUrl: './user-create.component.html',

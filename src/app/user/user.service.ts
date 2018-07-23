@@ -10,25 +10,25 @@ import {JsonResponse} from '../JsonResponse';
 
 export class UserService{
 
-    url="http://localhost:55941/Users";
+    url="http://localhost:55941/Users/";
 
     list(): Observable<JsonResponse>{
-      return this.http.get(this.url+"List") as Observable<JsonResponse>
+      return this.http.get(this.url+"list") as Observable<JsonResponse>
     }
     get(id: number): Observable<JsonResponse>{
-      return this.http.get(this.url+"Get/"+id) as Observable<JsonResponse>;
+      return this.http.get(this.url+"get/"+id) as Observable<JsonResponse>;
     }
 
     create(user:User): Observable<JsonResponse>{
-      return this.http.post(this.url+"Create",user) as Observable<JsonResponse>;
+      return this.http.post(this.url+"create",user) as Observable<JsonResponse>;
     }
 
     edit(user: User): Observable<JsonResponse>{
-      return this.http.post(this.url+"Change",user) as Observable<JsonResponse>;
+      return this.http.post(this.url+"edit",user) as Observable<JsonResponse>;
     }
 
     remove(user: User) : Observable<JsonResponse>{
-      return this.http.post(this.url+"Delete",user) as Observable<JsonResponse>
+      return this.http.post(this.url+"delete",user) as Observable<JsonResponse>
     }
 
     constructor( private http: HttpClient){}
