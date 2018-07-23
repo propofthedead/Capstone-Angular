@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import {User} from '../user';
 import {JsonResponse} from '../../JsonResponse';
+import { Route, Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-user-list',
@@ -10,23 +11,14 @@ import {JsonResponse} from '../../JsonResponse';
 })
 export class UserListComponent implements OnInit {
   
-  users: User[] = [
-    {Id:1,
-    UserName:"ararararaa",
-    Password: "sholmo",
-    FirstName: "apapa",
-    LastName: "ja",
-    Email:"adsjfa@adsfs.com",
-    Phone: "55555555",
-    IsAdmin:false,
-    IsReviewer:true,
-    Active:true
-    }
-  ];
+  users: User[] = [];
   resp: JsonResponse= new JsonResponse();
   
+  gotoCreate(){
+     this.route.navigateByUrl('Users/create');
+  }
 
-  constructor(private Usersvc: UserService) { }
+  constructor(private Usersvc: UserService, private route: Router) { }
 
   ngOnInit() {
     this.Usersvc.list()
