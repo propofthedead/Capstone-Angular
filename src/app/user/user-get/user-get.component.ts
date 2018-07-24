@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import {User} from '../user';
 import {JsonResponse} from '../../JsonResponse';
+import { ActivatedRoute } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-user-get',
@@ -10,14 +11,15 @@ import {JsonResponse} from '../../JsonResponse';
 })
 export class UserGetComponent implements OnInit {
 
-  user: User= new User();
-
+  user: User;
+  id: number;
   
 
-  constructor(private userscv: UserService) { }
+  constructor(private userscv: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.userscv.get(this.user.Id)
+     let id = this.route.snapshot.params.id
+    this.userscv.get(id)
     .subscribe(resp=>{
       this.user=resp.Data;
       console.log(resp);

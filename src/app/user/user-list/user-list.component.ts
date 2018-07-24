@@ -11,8 +11,8 @@ import { Route, Router } from '../../../../node_modules/@angular/router';
 })
 export class UserListComponent implements OnInit {
   
-  users: User[] = [];
-  resp: JsonResponse= new JsonResponse();
+  users: User[];
+  
   
   gotoCreate(){
      this.route.navigateByUrl('Users/create');
