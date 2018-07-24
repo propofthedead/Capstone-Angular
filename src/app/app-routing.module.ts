@@ -13,12 +13,16 @@ const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component: HomeComponent},
   {path:'about', component: AboutComponent},
+
   {path: 'user',component: UserComponent},
   {path: 'user/list', component: UserListComponent},
   {path: 'user/delete', component: UserDeleteComponent},
   {path:'user/create', component: UserCreateComponent},
   {path:'user/edit/:id',component: UserEditComponent},
   {path: 'user/get/:id', component: UserGetComponent},
+
+
+  
   {path:'**', component: HomeComponent}
 ];
 
