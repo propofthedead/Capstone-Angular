@@ -15,7 +15,7 @@ export class UserListComponent implements OnInit {
   resp: JsonResponse= new JsonResponse();
   
   gotoCreate(){
-     this.route.navigateByUrl('users/create');
+     this.route.navigateByUrl('Users/create');
   }
 
   constructor(private Usersvc: UserService, private route: Router) { }

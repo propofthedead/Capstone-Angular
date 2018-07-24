@@ -16,7 +16,7 @@ export class UserService{
       return this.http.get(this.url+"list") as Observable<JsonResponse>
     }
     get(id: number): Observable<JsonResponse>{
-      return this.http.get(this.url+"get/"+id) as Observable<JsonResponse>;
+      return this.http.get(this.url+"Get/"+id) as Observable<JsonResponse>;
     }
 
     create(user:User): Observable<JsonResponse>{
