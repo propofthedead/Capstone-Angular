@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import {User} from '../user';
 import {JsonResponse} from '../../JsonResponse';
-import { Router } from '../../../../node_modules/@angular/router';
+import { Router, ActivatedRoute } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-user-delete',
@@ -20,9 +20,19 @@ export class UserDeleteComponent implements OnInit {
         console.log(resp);
       })
   }
-  constructor(private router:Router, private Usersvc:UserService) { }
+
+  back():void{
+    this.router.navigateByUrl('/user/list');
+  }
+  constructor(private router:Router, private Usersvc:UserService, private routed:ActivatedRoute) { }
 
   ngOnInit() {
+    let id= this.routed.snapshot.params.id;
+    this.Usersvc.get(id)
+      .subscribe(resp=>{
+        this.user=resp.Data;
+        console.log(resp);
+      })
   }
 
 }

@@ -1,3 +1,18 @@
-<p>
-  user-delete works!
-</p>
+<div>
+  <h1>Are you sure you want to delete this user</h1>
+</div>
+
+<div>
+  <label>{{user.Firstname}} {{user.Lastname}}</label>
+  <div>
+    <label>{{user.Username}}</label>
+  </div>
+</div>
+<div>
+  <div>
+    <button click="delete()">Yes</button>
+    <span>
+      <button click="back()">No</button>
+    </span>
+  </div>
+</div>
