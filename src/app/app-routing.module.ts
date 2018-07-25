@@ -8,7 +8,7 @@ import {UserCreateComponent} from './user/user-create/user-create.component';
 import {UserDeleteComponent} from './user/user-delete/user-delete.component';
 import {UserEditComponent} from './user/user-edit/user-edit.component';
 import {UserGetComponent} from './user/user-get/user-get.component';
-import { VendorListComponent } from './Vendor/vendor-list/vendor-list.component';
+
 import { combineLatest } from '../../node_modules/rxjs';
 import { VendorCreateComponent } from './Vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: 'user/get/:id', component: UserGetComponent},
   {path: 'user/login',component: UserLoginComponent},
 
-  {path:'vendor/list', component: VendorListComponent},
+  {path:'vendor/list',component: VendorListComponent},
   {path: 'vendor/create', component: VendorCreateComponent},
   {path: 'vendor/edit/:id', component: VendorEditComponent},
   {path:'vendor/get/:id',component: VendorGetComponent},
