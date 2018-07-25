@@ -25,6 +25,7 @@ import { VendorDeleteComponent } from './vendor/vendor-delete/vendor-delete.comp
 import { UserLoginComponent } from '@user/user-login/user-login.component';
 import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductGetComponent } from './product/product-get/product-get.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ProductListComponent } from './product/product-list/product-list.compon
     VendorDeleteComponent,
     UserLoginComponent,
     ProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductGetComponent
   ],
   imports: [
     BrowserModule,
