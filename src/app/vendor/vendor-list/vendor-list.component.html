@@ -1,3 +1,29 @@
-<p>
-  vendor-list works!
-</p>
+<h1>Vendor list</h1>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>City,State</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>PreApproved?</th>
+        <th>Active?</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let vendor of vendors">
+      <tr>
+        <td>{{vendor.Name}}</td>
+        <td>{{vendor.Code}}</td>
+        <td>{{vendor.City}}, {{vendor.State}}</td>
+        <td>{{vendor.Address}} {{vendor.Zipcode}}</td>
+        <td>{{vendor.Email}}</td>
+        <td>{{vendor.Phone}}</td>
+        <td>{{vendor.IsPreApproved}}</td>
+        <td>{{vendor.Active}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -3,7 +3,7 @@ import {UserService} from '../user.service';
 import {User} from '../user';
 import {JsonResponse} from '../../JsonResponse';
 import { Route, Router } from '../../../../node_modules/@angular/router';
-
+ 
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
