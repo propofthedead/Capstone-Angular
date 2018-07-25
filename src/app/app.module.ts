@@ -22,6 +22,8 @@ import { VendorGetComponent } from './vendor/vendor-get/vendor-get.component';
 import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 import { VendorDeleteComponent } from './vendor/vendor-delete/vendor-delete.component';
+import { UserLoginComponent } from '@user/user-login/user-login.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { VendorDeleteComponent } from './vendor/vendor-delete/vendor-delete.comp
     
     VendorEditComponent,
     
-    VendorDeleteComponent
+    VendorDeleteComponent,
+    UserLoginComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
