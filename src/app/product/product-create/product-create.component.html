@@ -22,6 +22,9 @@
   </div>
   <div class="form-group">
     <label>Vendors</label>
-    <select id="Vendors"[(ngModel)]="product.Vendor" ng-option="Vendor for vendor in Vendors"></select>
+    <select id="Vendors"[(ngModel)]="product.Vendor" ng-option="Vendors">
+      <option *ngFor="let vendor of vendors" value="vendor">{{vendor.Name}}</option>
+    </select>
   </div>
+  <button (click)="create()"> create</button>
 </div>

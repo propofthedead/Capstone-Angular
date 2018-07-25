@@ -16,6 +16,7 @@ import { VendorGetComponent } from './vendor/vendor-get/vendor-get.component';
 import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 import { VendorDeleteComponent } from './vendor/vendor-delete/vendor-delete.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
 
 
 
@@ -37,6 +38,8 @@ const routes: Routes = [
   {path: 'vendor/create', component:VendorCreateComponent},
   {path:'vendor/edit/:id',component:VendorEditComponent},
   {path: 'vendor/delete/:id', component: VendorDeleteComponent},
+
+  {path: 'product/create',component:ProductCreateComponent},
 
   {path:'**', component: HomeComponent}
 ];

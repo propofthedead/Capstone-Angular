@@ -13,6 +13,16 @@ import { Product } from '../product';
 export class ProductCreateComponent implements OnInit {
   vendors:Vendor[];
   product: Product= new Product();
+
+  create(): void{
+    this.product.VendorId= this.product.Vendor.Id;
+    console.log(this.product);
+    this.Prodocutsvc.create(this.product)
+      .subscribe(resp=>{
+        console.log(resp)
+      })
+  }
+
   constructor(private Prodocutsvc:ProductService, private route:Router, private Vendorsvc:VendorService) { }
 
   ngOnInit() {
