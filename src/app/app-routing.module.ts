@@ -14,18 +14,20 @@ import { VendorCreateComponent } from './Vendor/vendor-create/vendor-create.comp
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 import { VendorGetComponent } from './Vendor/vendor-get/vendor-get.component';
 import { VendorDeleteComponent } from './vendor/vendor-delete/vendor-delete.component';
+import { UserLoginComponent } from '@user/user-login/user-login.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component: HomeComponent},
   {path:'about', component: AboutComponent},
 
-  {path: 'user',component: UserComponent},
+  
   {path: 'user/list', component: UserListComponent},
   {path: 'user/delete', component: UserDeleteComponent},
   {path:'user/create', component: UserCreateComponent},
   {path:'user/edit/:id',component: UserEditComponent},
   {path: 'user/get/:id', component: UserGetComponent},
+  {path: 'user/login',component: UserLoginComponent},
 
   {path:'vendor/list', component: VendorListComponent},
   {path: 'vendor/create', component: VendorCreateComponent},
