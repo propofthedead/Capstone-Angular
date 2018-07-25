@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserGetComponent } from './user-get.component';
+import { UserGetComponent } from '@user/user-get/user-get.component';
 
 describe('UserGetComponent', () => {
   let component: UserGetComponent;
