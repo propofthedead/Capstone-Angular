@@ -16,7 +16,7 @@ export class UserLoginComponent implements OnInit {
     this.Userscv.authenticate(this.username,this.password)
       .subscribe(resp=>{
         console.log(resp);
-        this.route.navigateByUrl('home');
+        this.route.navigateByUrl('/home');
       })
     
   }

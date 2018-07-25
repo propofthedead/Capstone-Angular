@@ -20,7 +20,7 @@ export class UserEditComponent implements OnInit {
     this.Usersvc.edit(this.user)
       .subscribe(resp=>{
         console.log(resp);
-        this.route.navigateByUrl('user/list');
+        this.route.navigateByUrl('/user/list');
       })
   }
 
