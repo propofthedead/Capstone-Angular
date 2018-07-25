@@ -1,0 +1,32 @@
+<h1>Vendor's List</h1>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Code</td>
+        <td>Address</td>
+        <td>City,State</td>
+        <td>Zipcode</td>
+        <td>Phone</td>
+        <td>Email</td>
+        <td>PreApproved?</td>
+        <td>Active?</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let vendor of vendors">
+      <tr>
+        <td>{{vendor.Name}}        </td>
+        <td>{{vendor.Code}}</td>
+        <td>{{vendor.Address}}</td>
+        <td>{{vendor.City}},{{vendor.State}}</td>
+        <td>{{vendor.Zipcode}}</td>
+        <td>{{vendor.Phone}}</td>
+        <td>{{vendor.Email}}</td>
+        <td>{{vendor.IsPreApproved}}</td>
+        <td>{{vendor.Active}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

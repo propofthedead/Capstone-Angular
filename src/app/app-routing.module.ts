@@ -11,6 +11,11 @@ import {UserGetComponent} from '@user/user-get/user-get.component';
 import { UserLoginComponent } from '@user/user-login/user-login.component';
 
 import { combineLatest } from 'rxjs';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorGetComponent } from './vendor/vendor-get/vendor-get.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
+import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { VendorDeleteComponent } from './vendor/vendor-delete/vendor-delete.component';
 
 
 
@@ -27,7 +32,11 @@ const routes: Routes = [
   {path: 'user/get/:id', component: UserGetComponent},
   {path: 'user/login',component: UserLoginComponent},
 
-  
+  {path:'vendor/list',component:VendorListComponent},
+  {path:'vendor/get/:id',component:VendorGetComponent},
+  {path: 'vendor/create', component:VendorCreateComponent},
+  {path:'vendor/edit/:id',component:VendorEditComponent},
+  {path: 'vendor/delete/:id', component: VendorDeleteComponent},
 
   {path:'**', component: HomeComponent}
 ];

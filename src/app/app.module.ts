@@ -17,6 +17,11 @@ import { UserEditComponent } from '@user/user-edit/user-edit.component';
 import { UserGetComponent } from '@user/user-get/user-get.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { PrsmenuComponent } from './prsmenu/prsmenu.component';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorGetComponent } from './vendor/vendor-get/vendor-get.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
+import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { VendorDeleteComponent } from './vendor/vendor-delete/vendor-delete.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,17 @@ import { PrsmenuComponent } from './prsmenu/prsmenu.component';
     UserGetComponent,
     VendorComponent,
     
-    PrsmenuComponent
+    PrsmenuComponent,
+    
+    VendorListComponent,
+    
+    VendorGetComponent,
+    
+    VendorCreateComponent,
+    
+    VendorEditComponent,
+    
+    VendorDeleteComponent
   ],
   imports: [
     BrowserModule,
