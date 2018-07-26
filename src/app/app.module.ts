@@ -36,6 +36,7 @@ import { RequestEditComponent } from './request/request-edit/request-edit.compon
 import { RequestDeleteComponent } from './request/request-delete/request-delete.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { LinesComponent } from './lines/lines.component';
+import { LinesListComponent } from './lines/lines-list/lines-list.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { LinesComponent } from './lines/lines.component';
     RequestEditComponent,
     RequestDeleteComponent,
     RequestCreateComponent,
-    LinesComponent
+    LinesComponent,
+    LinesListComponent
   ],
   imports: [
     BrowserModule,
