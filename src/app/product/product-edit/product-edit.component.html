@@ -1,0 +1,30 @@
+<div style="padding: 20px;">
+
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input id="name" type="text" class="form-control" placeholder="name" [(ngModel)]="product.Name">
+    </div>
+    <div class="form-group">
+      <label for="Name">Part Number</label>
+      <input id="part" type="text" class="form-control" placeholder="part" [(ngModel)]="product.PartNumber">
+    </div>
+    <div class="form-group">
+      <label for="Name">Unit</label>
+      <input id="unit" type="text" class="form-control" placeholder="unit" [(ngModel)]="product.Unit">
+    </div>
+    <div class="form-group">
+      <label for="Name">Price</label>
+      <input id="name" type="number" class="form-control"  [(ngModel)]="product.Price">
+    </div>
+    <div class="form-group">
+      <label for="Name">Photo Path</label>
+      <input id="name" type="text" class="form-control" placeholder="name" [(ngModel)]="product.PhotoPath">
+    </div>
+    <div class="form-group">
+      <label>Vendors</label>
+      <select id="Vendors"[(ngModel)]="product.VendorId" ng-option="Vendors">
+        <option *ngFor="let vendor of vendors" value="vendor.Id">{{vendor.Name}}</option>
+      </select>
+    </div>
+    <button (click)="create()"> create</button>
+  </div>
