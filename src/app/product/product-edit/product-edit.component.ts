@@ -14,6 +14,13 @@ export class ProductEditComponent implements OnInit {
 
   product: Product;
   vendors: Vendor[];
+  edit():void{
+    this.Productsvc.edit(this.product)
+    .subscribe(resp=>{
+      console.log(resp);
+    });
+    this.route.navigateByUrl('/products/list');
+  }
 
   constructor(private Productsvc:ProductService,private route:Router, private routed: ActivatedRoute, private Vendorsvc:VendorService) { }
 
