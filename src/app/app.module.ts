@@ -33,6 +33,7 @@ import { RequestComponent } from './request/request.component';
 import { RequestListComponent } from './request/request-list/request-list.component';
 import { RequestGetComponent } from './request/request-get/request-get.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestDeleteComponent } from './request/request-delete/request-delete.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { RequestEditComponent } from './request/request-edit/request-edit.compon
     RequestComponent,
     RequestListComponent,
     RequestGetComponent,
-    RequestEditComponent
+    RequestEditComponent,
+    RequestDeleteComponent
   ],
   imports: [
     BrowserModule,
