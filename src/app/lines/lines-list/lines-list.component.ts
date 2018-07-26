@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LinesService } from '../lines.service';
+import { Router } from '../../../../node_modules/@angular/router';
+import { Lines } from '../lines';
 
 @Component({
   selector: 'app-lines-list',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LinesListComponent implements OnInit {
 
-  constructor() { }
+  lines: Lines[]
+  constructor(private Listsvc:LinesService,private route: Router) { }
 
   ngOnInit() {
+    this.Listsvc.list()
+    .subscribe(resp=>{
+      this.lines=resp.Data;
+      console.log(resp);
+    })
   }
 
 }

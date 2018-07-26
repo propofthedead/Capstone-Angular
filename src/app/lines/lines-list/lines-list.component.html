@@ -1,3 +1,38 @@
-<p>
-  lines-list works!
-</p>
+<h1>Line List</h1>
+
+<div>
+  <table>
+    <thead>    
+      <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Purchase User
+      </th>
+      <th>
+        Quantity
+      </th>
+      <th>
+        Price
+      </th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let line of lines">
+    <tr>
+      <td>
+        {{line.Id}}
+      </td>
+      <td>
+        {{line.PurchaseRequest.User.Username}}
+      </td>
+      <td>
+        {{line.Quantity}}
+      </td>
+      <td>
+        {{line.Price}}
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</div>
