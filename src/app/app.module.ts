@@ -32,6 +32,7 @@ import { ProductDeleteComponent } from './product/product-delete/product-delete.
 import { RequestComponent } from './request/request.component';
 import { RequestListComponent } from './request/request-list/request-list.component';
 import { RequestGetComponent } from './request/request-get/request-get.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { RequestGetComponent } from './request/request-get/request-get.component
     ProductDeleteComponent,
     RequestComponent,
     RequestListComponent,
-    RequestGetComponent
+    RequestGetComponent,
+    RequestEditComponent
   ],
   imports: [
     BrowserModule,
