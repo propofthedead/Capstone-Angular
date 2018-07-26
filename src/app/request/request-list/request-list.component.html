@@ -1,0 +1,28 @@
+<h1>Request List</h1>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>Description</th>
+        <th>Justification</th>
+        <th>Rejection Reason</th>
+        <th>Deliviry Mode</th>
+        <th>Status</th>
+        <th> Price </th>        
+      </tr>
+    </thead>
+    <tbody *ngFor="let request of requests">
+      <tr>
+        <td>{{request.User.Username}}</td>
+        <td>{{request.Description}}</td>
+        <td>{{request.Justification}}</td>
+        <td>{{request.RejectReason}}</td>
+        <td>{{request.DeliviryMode}}</td>
+        <td>{{request.Status}}</td>
+        <td>{{request.Price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
