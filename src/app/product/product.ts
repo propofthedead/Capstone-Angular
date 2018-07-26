@@ -8,7 +8,7 @@ export class Product {
     Price:number;
     PhotoPath:string;
     VendorId: number;
- 
+    Vendor:Vendor;
 
     constructor(){}
 }
