@@ -29,6 +29,7 @@ import { ProductGetComponent } from './product/product-get/product-get.component
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
+import { RequestComponent } from './request/request.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { ProductDeleteComponent } from './product/product-delete/product-delete.
     ProductGetComponent,
     ProductCreateComponent,
     ProductEditComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    RequestComponent
   ],
   imports: [
     BrowserModule,
