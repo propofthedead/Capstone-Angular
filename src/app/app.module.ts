@@ -38,6 +38,7 @@ import { RequestCreateComponent } from './request/request-create/request-create.
 import { LinesComponent } from './lines/lines.component';
 import { LinesListComponent } from './lines/lines-list/lines-list.component';
 import { LinesGetComponent } from './lines/lines-get/lines-get.component';
+import { LinesEditComponent } from './lines/lines-edit/lines-edit.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { LinesGetComponent } from './lines/lines-get/lines-get.component';
     RequestCreateComponent,
     LinesComponent,
     LinesListComponent,
-    LinesGetComponent
+    LinesGetComponent,
+    LinesEditComponent
   ],
   imports: [
     BrowserModule,
