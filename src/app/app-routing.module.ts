@@ -18,6 +18,8 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
 import { VendorDeleteComponent } from './vendor/vendor-delete/vendor-delete.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { ProductGetComponent } from './product/product-get/product-get.component';
 
 
 
@@ -42,6 +44,8 @@ const routes: Routes = [
 
   {path: 'product/create',component:ProductCreateComponent},
   {path:'product/list',component:ProductListComponent},
+  {path: 'product/edit/:id',component: ProductEditComponent},
+  {path:'product/detail/:id',component:ProductGetComponent},
 
   {path:'**', component: HomeComponent}
 ];
