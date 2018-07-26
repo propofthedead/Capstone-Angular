@@ -1,3 +1,15 @@
-<p>
-  product-delete works!
-</p>
+<h1>Delete this product?</h1>
+
+<div>
+  <table>
+    <tr><th>Product name</th><td>{{product.Name}}</td></tr>
+    <tr><th>Product Unit</th><td>{{product.Unit}}</td></tr>
+    <tr><th>Product Part number</th><td>{{product.PartNumber}}</td></tr>
+  </table>
+  <div>
+    <button (click)="yes()">Yes</button>
+    <span>
+      <button (click)="no()">No</button>
+    </span>
+  </div>
+</div>
