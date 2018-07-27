@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LinesService } from '../lines.service';
 import { Router, ActivatedRoute } from '../../../../node_modules/@angular/router';
 import { Lines } from '../lines';
+import { ProductService } from '../../product/product.service';
+import { Product } from '../../product/product';
 
 @Component({
   selector: 'app-lines-edit',
@@ -10,7 +12,7 @@ import { Lines } from '../lines';
 })
 export class LinesEditComponent implements OnInit {
   line:Lines;
-
+  products: Product[];
   edit():void{
     this.Linesvc.edit(this.line)
     .subscribe(resp=>{
@@ -19,7 +21,7 @@ export class LinesEditComponent implements OnInit {
     this.router.navigateByUrl('/line/list');
   }
 
-  constructor(private Linesvc:LinesService, private router:Router, private routed:ActivatedRoute) { }
+  constructor(private Linesvc:LinesService, private router:Router, private routed:ActivatedRoute, private ProductSvc:ProductService) { }
 
   ngOnInit() {
     let id= this.routed.snapshot.params.id;
@@ -28,6 +30,12 @@ export class LinesEditComponent implements OnInit {
         this.line=resp.Data;
         console.log(resp);
     })
+    this.ProductSvc.list()
+    .subscribe(resp=>{
+      this.products=resp.Data;
+      console.log(resp);
+    })
+
   }
 
 }

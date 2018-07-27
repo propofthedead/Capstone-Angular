@@ -5,13 +5,19 @@
     <label>Request id</label>
     <textarea>{{line.PurchaseRequest.Description}}</textarea>
   </div>
+  
   <div>
+      <label>Product</label>
+      <select [(ngModel)]="line.ProductId" >
+        <option *ngFor="let product of Products" value="product.Id">{{product.Name}}</option>
+    </div>
+    <div>
     <label>Quanity</label>
-    <input type="number" [(ngModel)]="line.Quanity">
+    <input type="number" [(ngModel)]="line.Quantity">
   </div>
   <div>
     <label>Price</label>
-    <input type="number" [(ngModel)]="line.Price">
+    <input type="number" [(ngModel)]="line.Price"   "line.Price"="line.Product.Price"*"line.Quantity">
   </div>
   <button (click)="edit()">change</button>
 </div>
