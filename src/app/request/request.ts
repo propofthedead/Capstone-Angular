@@ -1,4 +1,5 @@
 import { User } from "@user/user";
+import { Lines } from "../lines/lines";
 
 export class Request {
     Id:number;
@@ -10,4 +11,5 @@ export class Request {
     Price:number;
     User: User;
     UserId: number;
+    Lines: Lines[];
 }
