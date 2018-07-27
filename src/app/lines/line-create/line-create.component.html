@@ -1,3 +1,19 @@
 <p>
   line-create works!
 </p>
+<div>
+    <div>
+      <label>Request id</label>
+      <select [(ngModel)]="line.ProductId" >
+        <option *ngFor="let product of Products" value="product.Id">{{product.Name}}</option>
+    </div>
+    <div>
+      <label>Quanity</label>
+      <input type="number" [(ngModel)]="line.Quanity">
+    </div>
+    <div>
+      <label>Price</label>
+      <input type="number" [(ngModel)]="line.Price">
+    </div>
+    <button (click)="create()">change</button>
+  </div>
