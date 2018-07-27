@@ -39,6 +39,7 @@ import { LinesComponent } from './lines/lines.component';
 import { LinesListComponent } from './lines/lines-list/lines-list.component';
 import { LinesGetComponent } from './lines/lines-get/lines-get.component';
 import { LinesEditComponent } from './lines/lines-edit/lines-edit.component';
+import { LineCreateComponent } from './lines/line-create/line-create.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { LinesEditComponent } from './lines/lines-edit/lines-edit.component';
     LinesComponent,
     LinesListComponent,
     LinesGetComponent,
-    LinesEditComponent
+    LinesEditComponent,
+    LineCreateComponent
   ],
   imports: [
     BrowserModule,
