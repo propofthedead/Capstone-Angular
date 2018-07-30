@@ -1,4 +1,9 @@
-<table *ngFor="let menu of menus">
-    <th><a href="menu.href">{{menu.Name}}</a></th>
- 
-</table>
+<nav>
+  <div class="navbar-nav mx-auto">
+    <ul>
+      <li *ngFor="let menu of menus">
+        <a routerLink="{{menu.href}}">{{menu.Name}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
