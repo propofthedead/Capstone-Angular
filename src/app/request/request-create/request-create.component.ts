@@ -11,11 +11,14 @@ import { Request } from '../request';
 export class RequestCreateComponent implements OnInit {
 request: Request;
 
+
+
 create():void{
   this.Requestsvc.create(this.request)
   .subscribe(resp=>{
     console.log(resp);
   })
+  this.router.navigateByUrl("/request/list");
 }
   constructor(private Requestsvc:RequestService, private router: Router) { }
 
