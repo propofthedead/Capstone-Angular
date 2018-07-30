@@ -1,3 +1,14 @@
-<p>
-  request-create works!
-</p>
+<div class="form-group">
+    <label>Description</label>
+    <input id="description" class="form-control" [(ngModel)]="request.Description">
+  </div>
+  <div>
+    <label>Justification</label>
+    <input id="justification" class="form-control" [(ngModel)]="request.Justification">
+  </div>
+  <div>
+    <label>Deliviry Mode</label>
+    <input id="delivirymode" class="form-control" [(ngModel)]="request.DeliviryMode">
+  </div>
+  <button (click)="create()">Create</button>
+</div>
