@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-
+import{Request} from './request';
 import { JsonResponse } from '../JsonResponse';
 
 @Injectable({

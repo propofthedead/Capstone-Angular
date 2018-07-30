@@ -38,10 +38,11 @@ import { RequestCreateComponent } from './request/request-create/request-create.
 import { LinesComponent } from './lines/lines.component';
 import { LinesListComponent } from './lines/lines-list/lines-list.component';
 import { LinesGetComponent } from './lines/lines-get/lines-get.component';
-
+import {PrsmenuComponent} from './prsmenu/prsmenu.component';
 
 import { LineDeleteComponent } from './lines/line-delete/line-delete.component';
 import { LineEditComponent } from './lines/line-edit/line-edit.component';
+import { LineCreateComponent } from './lines/line-create/line-create.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { LineEditComponent } from './lines/line-edit/line-edit.component';
     UserEditComponent,
     UserGetComponent,
     VendorComponent,
-    
+    PrsmenuComponent,
    
     
     VendorListComponent,
@@ -88,7 +89,10 @@ import { LineEditComponent } from './lines/line-edit/line-edit.component';
     LineDeleteComponent,
 
 
-    LineEditComponent
+    LineEditComponent,
+
+
+    LineCreateComponent
   ],
   imports: [
     BrowserModule,

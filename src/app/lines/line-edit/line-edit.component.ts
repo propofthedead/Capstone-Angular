@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
+import { LinesService } from '../lines.service';
+import { Lines } from '../lines';
 
 @Component({
   selector: 'app-line-edit',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LineEditComponent implements OnInit {
 
-  constructor() { }
+  line: Lines;
+
+  constructor(private routed: ActivatedRoute, private linesvc:LinesService, private router: Router) { }
 
   ngOnInit() {
+    let id= this.routed.snapshot.params.id;
+    this.linesvc.get(id)
+    .subscribe(resp=>{
+      this.line=resp.Data;
+      console.log(resp);
+    })
   }
 
 }
