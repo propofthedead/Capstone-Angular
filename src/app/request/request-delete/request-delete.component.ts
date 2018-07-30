@@ -11,6 +11,14 @@ import { Request } from '../request';
 export class RequestDeleteComponent implements OnInit {
 
   request: Request;
+
+  delete():void{
+    this.Requestsvc.remove(this.request)
+    .subscribe(resp=>{
+      console.log(resp);
+    })
+    this.router.navigateByUrl('request/list');
+  }
   constructor(private Requestsvc: RequestService, private router: Router, private routed: ActivatedRoute) { }
 
   ngOnInit() {
