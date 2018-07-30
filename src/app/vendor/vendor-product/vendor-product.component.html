@@ -1,0 +1,24 @@
+<div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>PartNumber</th>
+          <th>Unit</th>
+          <th>Price</th>
+          <th>PhotoPath</th>
+          
+        </tr>
+      </thead>
+      <tbody *ngFor="let product of products">
+        <tr>
+          <td>{{product.Name}}</td>
+          <td>{{product.PartNumber}}</td>
+          <td>{{product.Unit}}</td>
+          <td>{{product.Price}}</td>
+          <td>{{product.PhotoPath}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>

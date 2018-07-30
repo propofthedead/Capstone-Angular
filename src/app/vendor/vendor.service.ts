@@ -30,7 +30,9 @@ export class VendorService {
     return this.http.post(this.url+"delete",vendor) as Observable<JsonResponse>
   }
 
-
+  product(vendor: Vendor): Observable<JsonResponse>{
+    return this.http.post(this.url+"getproducts", vendor) as Observable<JsonResponse>
+  }
 
   constructor( private http: HttpClient){}
 }

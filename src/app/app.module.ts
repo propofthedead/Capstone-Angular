@@ -43,6 +43,7 @@ import {PrsmenuComponent} from './prsmenu/prsmenu.component';
 import { LineDeleteComponent } from './lines/line-delete/line-delete.component';
 import { LineEditComponent } from './lines/line-edit/line-edit.component';
 import { LineCreateComponent } from './lines/line-create/line-create.component';
+import { VendorProductComponent } from './vendor/vendor-product/vendor-product.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,10 @@ import { LineCreateComponent } from './lines/line-create/line-create.component';
     LineEditComponent,
 
 
-    LineCreateComponent
+    LineCreateComponent,
+
+
+    VendorProductComponent
   ],
   imports: [
     BrowserModule,
