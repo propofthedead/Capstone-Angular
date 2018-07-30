@@ -12,6 +12,13 @@ export class RequestEditComponent implements OnInit {
 
   request: Request
 
+  edit():void{
+    this.Requestsvc.edit(this.request)
+    .subscribe(resp=>{
+      console.log(resp);
+    })
+    this.router.navigateByUrl('/request/list');
+  }
   constructor(private Requestsvc: RequestService, private router:Router, private routed: ActivatedRoute) { }
 
   ngOnInit() {
