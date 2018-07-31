@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '@user/user.service';
 import { Route, Router } from '@angular/router';
+import { SystemService } from '../../system/system.service';
+import { User } from '@user/user';
 
 @Component({
   selector: 'app-user-login',
@@ -12,17 +14,21 @@ export class UserLoginComponent implements OnInit {
   username: string;
   password: string;
 
+  user: User
   login():void{
+    this.Sysservice.clearLoggedInUser()
     this.Userscv.authenticate(this.username,this.password)
       .subscribe(resp=>{
         console.log(resp);
+        this.user=resp.Data;
+        this.Sysservice.setLoggedInUser(this.user);
         this.route.navigateByUrl('/home');
+   
       })
-    
   }
 
 
-  constructor(private Userscv: UserService, private route: Router) { }
+  constructor(private Userscv: UserService, private route: Router, private Sysservice: SystemService) { }
 
   ngOnInit() {
   }
