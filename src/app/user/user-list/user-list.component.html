@@ -13,7 +13,7 @@
       <th>Reviewer?</th>
       <th>Admin?</th>
       <th>Active?</th>
-      <th>Actions</th>
+      <th *ngIf="loggedInUser.IsAdmin">Actions</th>
     </tr>
     </thead>
     <tbody *ngFor= "let user of users">
@@ -26,7 +26,7 @@
         <td>{{user.IsReviewer}}</td>
         <td>{{user.IsAdmin}}</td>
         <td>{{user.Active}}</td>
-        <td><a routerLink='/user/edit/{{user.Id}}'>Edit</a>|<a routerLink='/user/delete/{{user.Id}}'>Delete</a></td>
+        <td *ngIf="loggedInUser.IsAdmin"><a routerLink='/user/edit/{{user.Id}}'>Edit</a>|<a routerLink='/user/delete/{{user.Id}}'>Delete</a></td>
       </tr>
     </tbody>
     
