@@ -24,6 +24,8 @@ export class VendorCreateComponent implements OnInit {
         this.route.navigateByUrl('/vendor/list');
       })
     }
+
+    
   }
   able():boolean{
     if(this.logged.IsAdmin==true){
@@ -36,6 +38,9 @@ export class VendorCreateComponent implements OnInit {
   ngOnInit() {
     this.Syssvc.checkLogin();
     this.logged=this.Syssvc.getLoggedInUser();
+    if(this.logged.IsAdmin==false && this.logged.IsReviewer==false){
+      this.route.navigateByUrl('/vendor/list');
+    }
   }
 
 }
