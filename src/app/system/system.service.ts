@@ -43,7 +43,7 @@ export class SystemService {
   }
   checkLogin():void{
     if(!this.isLoggedIn()){
-      this.router.navigateByUrl("/users/login")
+      this.router.navigateByUrl("/user/login")
     }
   }
   constructor(private router: Router) { 
