@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
 import { Product } from '../product';
+import { User } from '@user/user';
+import { SystemService } from '../../system/system.service';
 
 @Component({
   selector: 'app-product-delete',
@@ -11,6 +13,7 @@ import { Product } from '../product';
 export class ProductDeleteComponent implements OnInit {
 
   product: Product;
+  logged: User;
 
   yes():void{
     this.Productsvc.remove(this.product)
@@ -25,7 +28,7 @@ export class ProductDeleteComponent implements OnInit {
   }
 
 
-  constructor(private Productsvc:ProductService, private routed:ActivatedRoute, private route: Router) { }
+  constructor(private Productsvc:ProductService, private routed:ActivatedRoute, private route: Router, private Syssvc: SystemService) { }
 
   ngOnInit() {
     let id= this.routed.snapshot.params.id;
@@ -34,6 +37,11 @@ export class ProductDeleteComponent implements OnInit {
         this.product= resp.Data;
         console.log(resp);
       })
+    this.Syssvc.checkLogin();
+    this.logged=this.Syssvc.getLoggedInUser();
+    if(this.logged.IsAdmin==false){
+      this.route.navigateByUrl('/product/list');
+    }
   }
 
 }
