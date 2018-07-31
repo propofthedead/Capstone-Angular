@@ -12,12 +12,12 @@
     <label>Deliviry Mode</label>
     <input id="delivirymode" class="form-control" [(ngModel)]="request.DeliviryMode">
   </div>
-  <div *ngIf="if (logged.IsAdmin==true || logged.IsReviewer==true)">
+  <div *ngIf="logged.IsAdmin || logged.IsReviewer">
     <label>Reject Reason</label>
     <input class="form-control" [(ngModel)]="request.RejectReason">
   </div>
-  <div *ngIf="if (logged.IsAdmin==true || logged.IsReviewer==true)">
-    <lable>Status</lable>
+  <div *ngIf=" logged.IsAdmin || logged.IsReviewer">
+    <label>Status</label>
     <select [(ngModel)]="request.Status">
       <option value="New">New</option>
       <option value="Pending">Pending</option>
@@ -26,4 +26,5 @@
     </select>
   </div>
   <button (click)="edit()">Change</button>
+  <button (click)="addProduct()">Add Product</button>
 </div>

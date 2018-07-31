@@ -23,6 +23,11 @@ export class RequestEditComponent implements OnInit {
     })
     this.router.navigateByUrl('/request/list');
   }
+
+  addProduct():void{
+    
+  }
+
   constructor(private Requestsvc: RequestService, private router:Router, private routed: ActivatedRoute, private Syssvc: SystemService) { }
 
   ngOnInit() {
