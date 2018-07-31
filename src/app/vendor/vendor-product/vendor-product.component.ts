@@ -3,6 +3,7 @@ import { VendorService } from '../vendor.service';
 import { Router, ActivatedRoute } from '../../../../node_modules/@angular/router';
 import { Product } from '../../product/product';
 import { Vendor } from '../vendor';
+import { SystemService } from '../../system/system.service';
 
 @Component({
   selector: 'app-vendor-product',
@@ -13,7 +14,7 @@ export class VendorProductComponent implements OnInit {
 
   products: Product[];
   vendor: Vendor;
-  constructor(private Vendorsvc: VendorService, private router: Router, private routed: ActivatedRoute) { }
+  constructor(private Vendorsvc: VendorService, private router: Router, private routed: ActivatedRoute, private Syssvc: SystemService) { }
 
   ngOnInit() {
     let id= this.routed.snapshot.params.id;
@@ -27,6 +28,7 @@ export class VendorProductComponent implements OnInit {
       this.products=resp.Data;
       console.log(resp);
     })
+    this.Syssvc.checkLogin();
   }
 
 }
