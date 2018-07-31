@@ -44,6 +44,7 @@ import { LineDeleteComponent } from './lines/line-delete/line-delete.component';
 import { LineEditComponent } from './lines/line-edit/line-edit.component';
 import { LineCreateComponent } from './lines/line-create/line-create.component';
 import { VendorProductComponent } from './vendor/vendor-product/vendor-product.component';
+import { ProductLineComponent } from './request/product-line/product-line.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,10 @@ import { VendorProductComponent } from './vendor/vendor-product/vendor-product.c
     LineCreateComponent,
 
 
-    VendorProductComponent
+    VendorProductComponent,
+
+
+    ProductLineComponent
   ],
   imports: [
     BrowserModule,

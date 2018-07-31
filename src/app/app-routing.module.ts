@@ -31,6 +31,7 @@ import { RequestCreateComponent } from './request/request-create/request-create.
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestGetComponent } from './request/request-get/request-get.component';
 import { RequestDeleteComponent } from './request/request-delete/request-delete.component';
+import { ProductLineComponent } from './request/product-line/product-line.component';
 
 
 
@@ -70,6 +71,7 @@ const routes: Routes = [
   {path: 'request/edit/:id',component: RequestEditComponent},
   {path: 'request/detail/:id', component: RequestGetComponent},
   {path: 'request/delete/:id', component: RequestDeleteComponent},
+  {path:'request/products/:id',component: ProductLineComponent},
 
   {path:'**', component: HomeComponent}
 ];
