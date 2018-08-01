@@ -45,6 +45,7 @@ import { LineEditComponent } from './lines/line-edit/line-edit.component';
 import { LineCreateComponent } from './lines/line-create/line-create.component';
 import { VendorProductComponent } from './vendor/vendor-product/vendor-product.component';
 import { ProductLineComponent } from './request/product-line/product-line.component';
+import { MenuItemComponent } from './menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,10 @@ import { ProductLineComponent } from './request/product-line/product-line.compon
     VendorProductComponent,
 
 
-    ProductLineComponent
+    ProductLineComponent,
+
+
+    MenuItemComponent
   ],
   imports: [
     BrowserModule,
