@@ -31,7 +31,7 @@ export class UserService{
       return this.http.post(this.url+"delete",user) as Observable<JsonResponse>
     }
 
-    authenticate(username:string, password:string): Observable<JsonResponse>{
+    authenticate(username: string, password: string): Observable<JsonResponse>{
       return this.http.get(this.url+"authenticate/"+username+"/"+password) as Observable<JsonResponse>
     }
 

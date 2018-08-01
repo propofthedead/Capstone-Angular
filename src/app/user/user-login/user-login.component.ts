@@ -11,13 +11,12 @@ import { User } from '@user/user';
 })
 export class UserLoginComponent implements OnInit {
 
-  username: string;
-  password: string;
+  
 
-  user: User
+  user: User= new User();
   login():void{
     this.Sysservice.clearLoggedInUser()
-    this.Userscv.authenticate(this.username,this.password)
+    this.Userscv.authenticate(this.user.Username,this.user.Password)
       .subscribe(resp=>{
         console.log(resp);
         this.user=resp.Data;
