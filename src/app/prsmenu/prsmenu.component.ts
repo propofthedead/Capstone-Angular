@@ -11,10 +11,10 @@ export class PrsmenuComponent implements OnInit {
 
   menus: Menu[]=[
     new Menu("Prs","/home"),
-    new Menu("Users","/users/list"),
-    new Menu("Vendors","/vendors/list"),
-    new Menu("Products","/products/list"),
-    new Menu("Requests","/requests/list"),
+    new Menu("Users","/user/list"),
+    new Menu("Vendors","/vendor/list"),
+    new Menu("Products","/product/list"),
+    new Menu("Requests","/request/list"),
     new Menu("about","/about")
   ]
   constructor(private router:Router) { }
