@@ -3,7 +3,7 @@ import { Router } from '../../../node_modules/@angular/router';
 import { Menu } from './menu';
 
 @Component({
-  selector: 'app-prsmenu',
+  selector: 'prsmenu',
   templateUrl: './prsmenu.component.html',
   styleUrls: ['./prsmenu.component.css']
 })
