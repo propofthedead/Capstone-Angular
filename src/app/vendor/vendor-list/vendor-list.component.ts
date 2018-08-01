@@ -3,6 +3,7 @@ import{Vendor} from '../vendor';
 import { VendorService } from '../vendor.service';
 import { Router } from '../../../../node_modules/@angular/router';
 import { SystemService } from '../../system/system.service';
+import { User } from '@user/user';
 
 @Component({
   selector: 'app-vendor-list',
@@ -11,9 +12,11 @@ import { SystemService } from '../../system/system.service';
 })
 export class VendorListComponent implements OnInit {
   vendors: Vendor[];
-
+  logged:User;
   constructor(private vendorSvc:VendorService, private route:Router, private Syssvc: SystemService) { }
-
+add():void{
+  this.route.navigateByUrl('/vendor/create');
+}
   ngOnInit() {
     this.Syssvc.checkLogin();
     this.vendorSvc.list()
@@ -21,6 +24,7 @@ export class VendorListComponent implements OnInit {
       this.vendors=resp.Data;
       console.log(resp);
     })
+    this.logged=this.Syssvc.getLoggedInUser();
   }
 
 }

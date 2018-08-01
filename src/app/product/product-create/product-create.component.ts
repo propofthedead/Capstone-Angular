@@ -23,6 +23,7 @@ export class ProductCreateComponent implements OnInit {
       .subscribe(resp=>{
         console.log(resp)
       })
+      this.route.navigateByUrl('/product/list')
   }
 
   constructor(private Prodocutsvc:ProductService, private route:Router, private Vendorsvc:VendorService, private Syssvc:SystemService) { }

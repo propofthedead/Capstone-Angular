@@ -1,6 +1,8 @@
 <prsmenu></prsmenu>
 <h1>Vendor's List</h1>
-
+<div *ngIf="logged.IsAdmin">
+  <button (click)="add()">Add vendor</button>
+</div>
 <div>
   <table>
     <thead>
@@ -14,6 +16,7 @@
         <td>Email</td>
         <td>PreApproved?</td>
         <td>Active?</td>
+        <td *ngIf="logged.IsAdmin">Actions</td>
       </tr>
     </thead>
     <tbody *ngFor="let vendor of vendors">
@@ -27,6 +30,7 @@
         <td>{{vendor.Email}}</td>
         <td>{{vendor.IsPreApproved}}</td>
         <td>{{vendor.Active}}</td>
+        <td *ngIf="logged.IsAdmin"><a routerLink='/vendor/edit/{{vendor.Id}}'>Edit</a> | <a routerLink='/vendor/delete/{{vendor.Id}}'>Delete</a></td>
       </tr>
     </tbody>
   </table>

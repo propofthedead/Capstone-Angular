@@ -26,6 +26,16 @@
       <option value="Declined">Declined</option>
     </select>
   </div>
+  <div>
+      <table>
+          <tr *ngFor="let line of rlines">
+            <td>{{line.Product.Name}}</td>
+            <td>{{line.Product.Price}}</td>
+            <td>{{line.Quantity}}</td>
+            <td>{{line.Price}}</td>
+          </tr>
+      </table>
+  </div>
   <button (click)="edit()">Change</button>
   <button (click)="addProduct()">Add Product</button>
 </div>

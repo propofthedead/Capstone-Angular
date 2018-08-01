@@ -42,6 +42,9 @@ export class VendorEditComponent implements OnInit {
       this.vendor=resp.Data;
       console.log(resp);
     })
+  if(this.logged.IsAdmin==false){
+    this.route.navigateByUrl('/vendor/list');
+  }
   }
 
 }

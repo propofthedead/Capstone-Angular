@@ -1,1 +1,16 @@
 <prsmenu></prsmenu>
+
+
+<div>
+    <label>Quanity</label>
+    <input required type="number" placeholder="1" [(ngModel)]="line.Quantity">
+</div>
+<div>
+    <label>Products</label>
+    <select [(ngModel)] = "line.ProductId">
+        <option *ngFor="let product of products" value="product.Id">{{product.Name}}</option>
+    </select>
+</div>
+<div>
+    <button (click)="add()">Add line</button>
+</div>

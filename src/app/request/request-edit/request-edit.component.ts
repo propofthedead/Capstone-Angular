@@ -4,6 +4,8 @@ import { Router, ActivatedRoute } from '../../../../node_modules/@angular/router
 import { Request } from '../request';
 import { SystemService } from '../../system/system.service';
 import { User } from '@user/user';
+import { LinesService } from '../../lines/lines.service';
+import { Lines } from '../../lines/lines';
 
 @Component({
   selector: 'app-request-edit',
@@ -14,7 +16,8 @@ export class RequestEditComponent implements OnInit {
 
   request: Request;
   logged: User;
-  
+  lines: Lines[];
+  rlines:Lines[];
    
     edit():void{
     this.Requestsvc.edit(this.request)
@@ -23,12 +26,12 @@ export class RequestEditComponent implements OnInit {
     })
     this.router.navigateByUrl('/request/list');
   }
-
+  
   addProduct():void{
     
   }
 
-  constructor(private Requestsvc: RequestService, private router:Router, private routed: ActivatedRoute, private Syssvc: SystemService) { }
+  constructor(private Requestsvc: RequestService, private router:Router, private routed: ActivatedRoute, private Syssvc: SystemService, private Linsvc:LinesService) { }
 
   ngOnInit() {
     let id= this.routed.snapshot.params.id;
@@ -41,6 +44,17 @@ export class RequestEditComponent implements OnInit {
     this.logged=this.Syssvc.getLoggedInUser();
     if(!(this.logged.IsAdmin ==true|| this.logged.IsReviewer==true|| this.logged.Id==this.request.UserId)){
       this.router.navigateByUrl('/request/list');
+    }
+
+    this.Linsvc.list()
+    .subscribe(resp=>{
+      this.lines=resp.Data;
+      console.log();
+    })
+    for(let line of this.lines){
+      if(line.PurchaseRequestId==this.request.Id){
+        this.rlines.push(line);
+      }
     }
   }
 

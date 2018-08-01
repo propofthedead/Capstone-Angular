@@ -38,7 +38,7 @@ export class VendorCreateComponent implements OnInit {
   ngOnInit() {
     this.Syssvc.checkLogin();
     this.logged=this.Syssvc.getLoggedInUser();
-    if(this.logged.IsAdmin==false && this.logged.IsReviewer==false){
+    if(this.logged.IsAdmin==false ){
       this.route.navigateByUrl('/vendor/list');
     }
   }

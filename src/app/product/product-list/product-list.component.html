@@ -1,6 +1,8 @@
 <prsmenu></prsmenu>
 <h1>Product List!!</h1>
-
+<div *ngIf="logged.IsAdmin">
+  <button (click)="add()">Add Product</button>
+</div>
 <div>
   <table>
     <thead>
@@ -11,6 +13,7 @@
         <th>Price</th>
         <th>PhotoPath</th>
         <th>Vendor</th>
+        <th *ngIf="logged.IsAdmin">Actions</th>
       </tr>
     </thead>
     <tbody *ngFor="let product of products">
@@ -21,6 +24,7 @@
         <td>{{product.Price}}</td>
         <td>{{product.PhotoPath}}</td>
         <td>{{product.Vendor.Name}}</td>
+        <td *ngIf="logged.IsAdmin"><a routerLink='product/edit/{{product.Id}}'>Edit</a> | <a routerLink='product/delete/{{product.Id}}'>Delete</a></td>
       </tr>
     </tbody>
   </table>

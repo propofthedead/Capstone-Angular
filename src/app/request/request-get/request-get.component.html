@@ -26,4 +26,25 @@
       </tr>
     </table>
   </div>
+  <h3>Line Items</h3>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let line of rlines">
+          <td>{{line.Product.Name}}</td>
+          <td>{{line.Product.Price}}</td>
+          <td>{{line.Quantity}}</td>
+          <td>{{line.Price}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

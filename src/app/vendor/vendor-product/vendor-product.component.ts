@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '../../../../node_modules/@angular/router
 import { Product } from '../../product/product';
 import { Vendor } from '../vendor';
 import { SystemService } from '../../system/system.service';
+import { User } from '@user/user';
 
 @Component({
   selector: 'app-vendor-product',
@@ -12,6 +13,7 @@ import { SystemService } from '../../system/system.service';
 })
 export class VendorProductComponent implements OnInit {
 
+  logged:User;
   products: Product[];
   vendor: Vendor;
   constructor(private Vendorsvc: VendorService, private router: Router, private routed: ActivatedRoute, private Syssvc: SystemService) { }
@@ -29,6 +31,7 @@ export class VendorProductComponent implements OnInit {
       console.log(resp);
     })
     this.Syssvc.checkLogin();
+    this.logged=this.Syssvc.getLoggedInUser();
   }
 
 }
