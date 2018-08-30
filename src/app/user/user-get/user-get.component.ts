@@ -5,6 +5,7 @@ import {JsonResponse} from '../../JsonResponse';
 import { ActivatedRoute } from '@angular/router';
 import { SystemService } from '../../system/system.service';
 
+
 @Component({
   selector: 'app-user-get',
   templateUrl: './user-get.component.html',
