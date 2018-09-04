@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '@user/user.service';
+import { Router } from '@angular/router';
+import { User } from '@user/user';
+import { create } from 'domain';
 
 @Component({
   selector: 'app-reister',
@@ -7,7 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  newUser :User
+
+
+  create(){
+    this.newUser.IsAdmin=false;
+    this.newUser.IsReviewer=false;
+    this.newUser.Active=true;
+
+    this.Usersvc.create(this.newUser);
+    this.router.navigateByUrl('/user/login')
+  }
+
+  constructor(private Usersvc: UserService, private router: Router) { }
 
   ngOnInit() {
   }
