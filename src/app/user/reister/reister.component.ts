@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '@user/user.service';
 import { Router } from '@angular/router';
 import { User } from '@user/user';
-import { create } from 'domain';
+
 
 @Component({
   selector: 'app-reister',
