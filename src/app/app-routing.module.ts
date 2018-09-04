@@ -32,7 +32,7 @@ import { RequestEditComponent } from './request/request-edit/request-edit.compon
 import { RequestGetComponent } from './request/request-get/request-get.component';
 import { RequestDeleteComponent } from './request/request-delete/request-delete.component';
 import { ProductLineComponent } from './request/product-line/product-line.component';
-
+import {RegisterComponent} from './user/reister/reister.component';
 
 
 const routes: Routes = [
@@ -47,6 +47,7 @@ const routes: Routes = [
   {path:'user/edit/:id',component: UserEditComponent},
   {path: 'user/get/:id', component: UserGetComponent},
   {path: 'user/login',component: UserLoginComponent},
+  {path: 'register', component: RegisterComponent},
 
   {path:'vendor/list',component:VendorListComponent},
   {path:'vendor/get/:id',component:VendorGetComponent},
