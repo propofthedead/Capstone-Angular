@@ -18,6 +18,7 @@ logged: User;
 
 create():void{
   this.request.UserId=this.logged.Id;
+  this.request.Price=0;
   this.Requestsvc.create(this.request)
   .subscribe(resp=>{
     console.log(resp);
