@@ -46,7 +46,7 @@ import { LineCreateComponent } from './lines/line-create/line-create.component';
 import { VendorProductComponent } from './vendor/vendor-product/vendor-product.component';
 import { ProductLineComponent } from './request/product-line/product-line.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
-import { ReisterComponent } from './user/reister/reister.component';
+import { RegisterComponent  } from './user/reister/reister.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +108,7 @@ import { ReisterComponent } from './user/reister/reister.component';
     MenuItemComponent,
 
 
-    ReisterComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
