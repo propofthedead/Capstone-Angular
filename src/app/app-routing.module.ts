@@ -36,45 +36,44 @@ import {RegisterComponent} from './user/reister/reister.component';
 
 
 const routes: Routes = [
-  {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'home',component: HomeComponent},
-  {path:'about', component: AboutComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'about', component: AboutComponent},
 
-  
   {path: 'user/list', component: UserListComponent},
   {path: 'user/delete/:id', component: UserDeleteComponent},
-  {path:'user/create', component: UserCreateComponent},
-  {path:'user/edit/:id',component: UserEditComponent},
+  {path: 'user/create', component: UserCreateComponent},
+  {path: 'user/edit/:id', component: UserEditComponent},
   {path: 'user/get/:id', component: UserGetComponent},
-  {path: 'user/login',component: UserLoginComponent},
+  {path: 'user/login', component: UserLoginComponent},
   {path: 'register', component: RegisterComponent},
 
-  {path:'vendor/list',component:VendorListComponent},
-  {path:'vendor/get/:id',component:VendorGetComponent},
-  {path: 'vendor/create', component:VendorCreateComponent},
-  {path:'vendor/edit/:id',component:VendorEditComponent},
+  {path: 'vendor/list', component: VendorListComponent},
+  {path: 'vendor/get/:id', component: VendorGetComponent},
+  {path: 'vendor/create', component: VendorCreateComponent},
+  {path: 'vendor/edit/:id', component: VendorEditComponent},
   {path: 'vendor/delete/:id', component: VendorDeleteComponent},
 
-  {path: 'product/create',component:ProductCreateComponent},
-  {path:'product/list',component:ProductListComponent},
-  {path: 'product/edit/:id',component: ProductEditComponent},
-  {path:'product/detail/:id',component:ProductGetComponent},
-  {path: 'product/delete/:id',component: ProductDeleteComponent},
+  {path: 'product/create', component: ProductCreateComponent},
+  {path: 'product/list', component: ProductListComponent},
+  {path: 'product/edit/:id', component: ProductEditComponent},
+  {path: 'product/detail/:id', component: ProductGetComponent},
+  {path: 'product/delete/:id', component: ProductDeleteComponent},
 
-  {path:'line/list',component:LinesListComponent},
-  {path:'line/detail/:id',component:LinesGetComponent},
+  {path: 'line/list', component: LinesListComponent},
+  {path: 'line/detail/:id', component: LinesGetComponent},
   {path: 'line/delete/:id', component: LineDeleteComponent},
-  {path: 'line/edit/:id', component:LineEditComponent},
+  {path: 'line/edit/:id', component: LineEditComponent},
   {path: 'line/create', component: LineCreateComponent},
 
-  {path: 'request/list', component:RequestListComponent},
-  {path:'request/create', component:RequestCreateComponent},
-  {path: 'request/edit/:id',component: RequestEditComponent},
+  {path: 'request/list', component: RequestListComponent},
+  {path: 'request/create', component: RequestCreateComponent},
+  {path: 'request/edit/:id', component: RequestEditComponent},
   {path: 'request/detail/:id', component: RequestGetComponent},
   {path: 'request/delete/:id', component: RequestDeleteComponent},
-  {path:'request/products/:id',component: ProductLineComponent},
+  {path: 'request/products/:id', component: ProductLineComponent},
 
-  {path:'**', component: HomeComponent}
+  {path: '**', component: HomeComponent}
 ];
 
 @NgModule({

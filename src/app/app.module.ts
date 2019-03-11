@@ -61,16 +61,10 @@ import { RegisterComponent  } from './user/reister/reister.component';
     UserGetComponent,
     VendorComponent,
     PrsmenuComponent,
-   
-    
     VendorListComponent,
-    
     VendorGetComponent,
-    
     VendorCreateComponent,
-    
     VendorEditComponent,
-    
     VendorDeleteComponent,
     UserLoginComponent,
     ProductComponent,

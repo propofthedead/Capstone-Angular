@@ -1,4 +1,4 @@
-export class User{
+export class User {
     Id: number;
     Username: string;
     Password: string;
@@ -6,14 +6,14 @@ export class User{
     Lastname: string;
     Phone: string;
     Email: string;
-    IsReviewer:boolean;
+    IsReviewer: boolean;
     IsAdmin: boolean;
     Active: boolean;
 
-    constructor(){
-        this.Id=0;
-        this.IsReviewer=false;
-        this.IsAdmin=false;
-        this.Active=true;
+    constructor() {
+        this.Id = 0;
+        this.IsReviewer = false;
+        this.IsAdmin = false;
+        this.Active = true;
     }
 }

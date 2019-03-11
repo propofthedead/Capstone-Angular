@@ -3,7 +3,7 @@ import { Router } from '../../../node_modules/@angular/router';
 import { User } from '@user/user';
 
 
-const baseUrl: string ='http://localhost:55941'
+const baseUrl: String = 'http://localhost:55941';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,42 +11,44 @@ export class SystemService {
 
   loggedInUser: User = null;
 
-  getLoggedInUser():User{
-    if(this.isLoggedIn())
+  getLoggedInUser(): User {
+    if (this.isLoggedIn()) {
       return this.loggedInUser;
-    return null;
+    }
+      return null;
   }
 
-  getLoggedInUserId():number{
-    if(!this.isLoggedIn()) {
+  getLoggedInUserId(): number {
+    if (!this.isLoggedIn()) {
       return 0;
     }
     return this.getLoggedInUser().Id;
   }
-  getLoggedInUserName():string{
-    if(this.isLoggedIn())
-       return this.loggedInUser.Firstname+" "+ this.loggedInUser.Lastname;
-    return "Login";
+  getLoggedInUserName(): string {
+    if (this.isLoggedIn()) {
+       return this.loggedInUser.Firstname + ' ' +  this.loggedInUser.Lastname ;
+    }
+       return 'Login' ;
   }
-  setLoggedInUser(user:User):void{
-    console.log("setlogged in user to", user);
-    this.loggedInUser=user;
+  setLoggedInUser(user: User): void {
+    console.log( 'setlogged in user to' , user);
+    this.loggedInUser = user;
   }
 
-  isLoggedIn(): boolean{
-    console.log("is a user logged in?", (this.loggedInUser==null) ? "No":"Yes");
+  isLoggedIn(): boolean {
+    console.log('is a user logged in?', (this.loggedInUser == null) ? 'No' : 'Yes');
     return this.loggedInUser != null;
   }
-  clearLoggedInUser(): void{
-    console.log("clear logged in user.");
-    this.loggedInUser=null;
+  clearLoggedInUser(): void {
+    console.log('clear logged in user.');
+    this.loggedInUser = null;
   }
-  checkLogin():void{
-    if(!this.isLoggedIn()){
-      this.router.navigateByUrl("/user/login")
+  checkLogin(): void {
+    if (!this.isLoggedIn()) {
+      this.router.navigateByUrl('/user/login');
     }
   }
-  constructor(private router: Router) { 
-    console.log("system service init: server url is",baseUrl)
+  constructor(private router: Router) {
+    console.log('system service init: server url is', baseUrl );
   }
 }

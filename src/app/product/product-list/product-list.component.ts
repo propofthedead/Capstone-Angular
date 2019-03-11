@@ -14,19 +14,19 @@ export class ProductListComponent implements OnInit {
   logged: User;
   products: Product[];
 
-  add():void{
-    this.route.navigateByUrl('/product/create')
+  add(): void {
+    this.route.navigateByUrl('/product/create');
   }
-  constructor(private Productsvc: ProductService, private route: Router, private Syssvc:SystemService) { }
+  constructor(private Productsvc: ProductService, private route: Router, private Syssvc: SystemService) { }
 
   ngOnInit() {
     this.Productsvc.list()
-    .subscribe(resp=>{
+    .subscribe(resp => {
       console.log(resp);
-      this.products=resp.Data;
-    })
+      this.products = resp.Data;
+    });
     this.Syssvc.checkLogin();
-    this.logged=this.Syssvc.getLoggedInUser();
+    this.logged = this.Syssvc.getLoggedInUser();
   }
 
 }
